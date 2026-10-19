@@ -1,0 +1,167 @@
+{
+  "intro": "Two threads ran through this week: AI search got more clickable and more measurable, and the ad platforms kept swapping manual controls for automated defaults. Also, if your ChatGPT referrals looked like they fell off a cliff, they probably didn’t.",
+  "publishedAt": "2026-10-19",
+  "stories": [
+    {
+      "category": "analytics",
+      "id": "s1",
+      "needsAction": true,
+      "source": "Search Engine Journal",
+      "summary": "After the GPT-6 rollout, reported ChatGPT referrals in GA4 fell somewhere between 22% and 57% depending on the dataset, while Direct traffic rose by a similar amount. Missing UTM and referrer data was relabeling the visits. OpenAI confirmed the problem on Oct 14 and started shipping a fix the next day.",
+      "takeaway": "Annotate Oct 8–15 in client reports and compare ChatGPT vs. Direct before calling it an AI traffic decline.",
+      "title": "ChatGPT’s traffic dip was a tracking bug, not lost visitors",
+      "url": "https://www.searchenginejournal.com/chatgpt-traffic-drop-appears-to-be-a-tracking-problem/593157/"
+    },
+    {
+      "category": "search",
+      "id": "s2",
+      "needsAction": false,
+      "source": "Search Engine Land",
+      "summary": "Source links now show up more often and higher in AI answers, some responses get a dedicated block pointing to official sites, article carousels are expanding to more queries and languages, and creator names on videos now link to their Search profiles.",
+      "takeaway": "Track AI Overview and AI Mode referrals over the next few weeks to see whether the extra links actually send clicks.",
+      "title": "Google puts more links inside AI Overviews and AI Mode",
+      "url": "https://searchengineland.com/google-updates-ai-mode-and-ai-overview-with-more-links-context-carousels-and-information-on-creators-496242"
+    },
+    {
+      "category": "search",
+      "id": "s3",
+      "needsAction": false,
+      "source": "Search Engine Land",
+      "summary": "Google’s new flagship model is live in AI Mode and the Gemini app for Pro and Ultra subscribers, and through the Gemini API. Google says it does a better job of following intent across back-and-forth conversations.",
+      "takeaway": "Spot-check how clients get summarized for their core queries in AI Mode; answers may shift with the new model.",
+      "title": "Gemini 4 Argon now powers AI Mode",
+      "url": "https://searchengineland.com/gemini-4-argon-rolling-out-in-google-ai-mode-gemini-495592"
+    },
+    {
+      "category": "search",
+      "id": "s4",
+      "needsAction": true,
+      "source": "Social Media Today",
+      "summary": "An SE Ranking study of 100,000+ keywords across 20 niches found a social or community source in roughly 68% of AI Overviews, compared with about 32% of AI Mode answers and 8% of ChatGPT answers. YouTube led in AI Overviews; Reddit led in AI Mode and ChatGPT.",
+      "takeaway": "Check which social profiles get cited for each client’s core queries and fold social into AI-visibility plans.",
+      "title": "Social platforms are cited in about two-thirds of AI Overviews",
+      "url": "https://www.socialmediatoday.com/news/ai-favors-brands-with-an-active-social-media-presence/832450/"
+    },
+    {
+      "category": "social",
+      "id": "s5",
+      "needsAction": true,
+      "source": "Social Media Today",
+      "summary": "YouTube’s Gemini-powered conversational search is no longer a Premium perk. It’s now on mobile, web and TV across the US, answering natural-language questions with a mix of long-form videos, Shorts and text. Support on Shorts and live streams is coming later.",
+      "takeaway": "Tighten video titles, add chapters, and make videos answer specific questions so they surface in Ask YouTube.",
+      "title": "Ask YouTube’s AI search reaches every US user",
+      "url": "https://www.socialmediatoday.com/news/youtube-rolls-out-ai-search-chatbot-to-all-us-users/832923/"
+    },
+    {
+      "category": "paid-search",
+      "id": "s6",
+      "needsAction": true,
+      "source": "Search Engine Land",
+      "summary": "Search, Shopping, Performance Max and Demand Gen campaigns can now rank channels like Search, Search Partners and Display by priority, and cap how much of the daily budget low-priority channels can take. Every channel starts at high priority, and the old spend-allocation setup is removed in February 2027.",
+      "takeaway": "Review accounts now, since the high-priority default can shift spend. Google suggests Display at low priority with a 50% cap to keep current behavior.",
+      "title": "Google Ads adds channel priority and budget caps",
+      "url": "https://searchengineland.com/google-ads-introduces-channel-prioritization-and-budget-allocation-controls-495946"
+    },
+    {
+      "category": "paid-search",
+      "id": "s7",
+      "needsAction": true,
+      "source": "Search Engine Roundtable",
+      "summary": "Since Oct 12, Google can extract coupons and deals from an advertiser’s website and add them to Search and Performance Max campaigns that have linked location assets but no promotion assets. Advertisers are opted in by default.",
+      "takeaway": "Switch off Automated Promotions in account-level automated asset settings for any client whose offers need sign-off.",
+      "title": "Google Ads now pulls promotions from your site automatically",
+      "url": "https://seroundtable.com/google-ads-automated-promotions-october-12-42223.html"
+    },
+    {
+      "category": "paid-search",
+      "id": "s8",
+      "needsAction": false,
+      "source": "Search Engine Land",
+      "summary": "Starting with v26, the API ships twice monthly, which Google frames as support for agent-driven workflows. Breaking-change releases stay at four per year and sunset timelines are unchanged.",
+      "takeaway": "Let whoever maintains our scripts and reporting connectors know about the faster cadence.",
+      "title": "Google Ads API moves to two releases a month",
+      "url": "https://searchengineland.com/google-ads-api-moves-to-twice-monthly-releases-starting-with-v26-495545"
+    },
+    {
+      "category": "paid-social",
+      "id": "s9",
+      "needsAction": false,
+      "source": "Search Engine Land",
+      "summary": "Ads Super Burst reserves a 3–24 hour window for launches and big moments; First Impression Ads (a US test) sells the first Feed ad slot to one advertiser per day; Reels Trending Ads run next to trending Reels; and Aggregated View Time (alpha) measures attention across repeated video exposures.",
+      "takeaway": "Consider Super Burst for holiday and launch moments, and judge it on campaign goals rather than Meta’s early case studies.",
+      "title": "Meta launches four brand advertising options",
+      "url": "https://searchengineland.com/meta-introduces-new-brand-advertising-formats-across-facebook-and-instagram-496608"
+    },
+    {
+      "category": "paid-social",
+      "id": "s10",
+      "needsAction": true,
+      "source": "Social Media Today",
+      "summary": "Engagement, leads, app promotion and sales campaigns can no longer block individual placements at the ad-set level. Account-level restrictions still work, for now.",
+      "takeaway": "Move brand-safety placement exclusions to account-level settings or a third-party verification tool.",
+      "title": "More Meta campaign types lose placement exclusions",
+      "url": "https://www.socialmediatoday.com/news/meta-offers-updated-ad-placement-control-guidance/832791/"
+    },
+    {
+      "category": "social",
+      "id": "s11",
+      "needsAction": false,
+      "source": "TechCrunch",
+      "summary": "Facebook users can now tell the algorithm directly what they want more or less of, instead of the feed relying only on passive engagement signals.",
+      "takeaway": "Watch organic reach on client Pages for shifts as people start using the new controls.",
+      "title": "Facebook lets people steer their own feed",
+      "url": "https://techcrunch.com/2026/10/13/facebook-is-giving-users-more-control-over-their-algorithm/"
+    },
+    {
+      "category": "search",
+      "id": "s12",
+      "needsAction": true,
+      "source": "Search Engine Journal",
+      "summary": "Nozzle’s analysis found that results served to automated tools showed AI Overviews about 35% of the time versus 54% for real-user baselines, along with more forum and image results and artificial volatility.",
+      "takeaway": "Sanity-check rank-tracker swings against Search Console before reporting volatility to clients.",
+      "title": "Google may be showing rank trackers different results",
+      "url": "https://www.searchenginejournal.com/analysis-google-is-poisoning-search-results-for-rank-trackers/592873/"
+    },
+    {
+      "category": "search",
+      "id": "s13",
+      "needsAction": false,
+      "source": "Search Engine Journal",
+      "summary": "After a domain or URL change, Google has to recrawl, reindex and re-evaluate links, redirects and relevance. Larger and older sites, with more history to reconcile, take the longest.",
+      "takeaway": "Build a 3–6 month recovery window into migration timelines and client expectations.",
+      "title": "Google says site migrations can take more than four months to settle",
+      "url": "https://www.searchenginejournal.com/google-says-why-site-migrations-can-exceed-4-months/592757/"
+    },
+    {
+      "category": "search",
+      "id": "s14",
+      "needsAction": true,
+      "source": "Search Engine Land",
+      "summary": "A new beta tab in the AI Performance report clusters the queries where your site is cited in AI answers into themes, with demand and competition for each, plus a list of high-volume queries where competitors are cited and you aren’t.",
+      "takeaway": "Pull the Top Opportunity Queries list for each client; it’s a free content-gap report.",
+      "title": "Bing Webmaster Tools groups your AI citations by topic",
+      "url": "https://searchengineland.com/bing-webmaster-tools-ai-performance-report-new-topics-portfolio-495584"
+    },
+    {
+      "category": "commerce",
+      "id": "s15",
+      "needsAction": true,
+      "source": "Search Engine Land",
+      "summary": "Local inventory feeds can now specify the exact store address instead of relying only on store codes, which had to match Business Profiles exactly (down to capitalization) to avoid rejected listings.",
+      "takeaway": "Add the store address attribute to local feeds and match it to each location’s Business Profile.",
+      "title": "Merchant Center adds a store address attribute for local inventory",
+      "url": "https://searchengineland.com/google-merchant-center-introduces-new-store-address-attribute-for-local-inventory-496135"
+    },
+    {
+      "category": "commerce",
+      "id": "s16",
+      "needsAction": false,
+      "source": "MarTech",
+      "summary": "CreatorIQ introduced Q, an agentic system for creator marketing, while Validity and Sound.me released MCP connectors that bring email and creator-campaign data into AI assistants like ChatGPT and Claude.",
+      "takeaway": "If we run creator or email programs in these platforms, ask the vendors about connector access.",
+      "title": "Agentic tools keep landing in creator and email martech",
+      "url": "https://martech.org/the-latest-ai-powered-martech-news-and-releases/"
+    }
+  ],
+  "weekOf": "Oct 12–19, 2026"
+}

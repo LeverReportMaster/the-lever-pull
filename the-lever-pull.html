@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Lever Pull</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#E5E0D5; --surface:#F4F1EB; --ink:#201D1E; --muted:#525151; --rule:#C4C1BA;
+  --band:#201D1E; --band-ink:#E5E0D5; --band-muted:#A7AAAC;
+  --hl:#5A9AD3; --hl-ink:#201D1E; --focus:#63839E;
+  --c-search:#61C4B2; --c-paid-search:#5A9AD3; --c-social:#63839E; --c-paid-social:#2F6A9E; --c-analytics:#A7AAAC; --c-commerce:#525151;
+  --display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  color-scheme: light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#201D1E; --surface:#2B2728; --ink:#E5E0D5; --muted:#A7AAAC; --rule:#525151;
+    --band:#171516; --band-ink:#E5E0D5; --band-muted:#A7AAAC;
+    --hl:#5A9AD3; --hl-ink:#201D1E; --focus:#61C4B2;
+    --c-search:#61C4B2; --c-paid-search:#5A9AD3; --c-social:#8FA9C0; --c-paid-social:#9CC3E8; --c-analytics:#A7AAAC; --c-commerce:#E5E0D5;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#201D1E; --surface:#2B2728; --ink:#E5E0D5; --muted:#A7AAAC; --rule:#525151;
+  --band:#171516; --band-ink:#E5E0D5; --band-muted:#A7AAAC;
+  --hl:#5A9AD3; --hl-ink:#201D1E; --focus:#61C4B2;
+  --c-search:#61C4B2; --c-paid-search:#5A9AD3; --c-social:#8FA9C0; --c-paid-social:#9CC3E8; --c-analytics:#A7AAAC; --c-commerce:#E5E0D5;
+  color-scheme: dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--band)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:4px}
+button,input,select{font:inherit;color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(1rem,4vw,2.5rem)}
+
+/* Masthead */
+.band{background:var(--band);color:var(--band-ink);padding:clamp(2rem,6vw,3.75rem) 0 clamp(1.75rem,4vw,2.75rem)}
+.mast{display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:end}
+.brand{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,9vw,5.6rem);line-height:.92;letter-spacing:-.035em;margin:0;font-variation-settings:"opsz" 96}
+.tag{font-family:var(--display);color:var(--band-muted);margin:.85rem 0 0;font-size:1rem}
+.issue-pick{display:flex;flex-direction:column;gap:.35rem;font-family:var(--display);font-size:.875rem;color:var(--band-muted)}
+.issue-pick select{background:transparent;color:var(--band-ink);border:1.5px solid var(--band-muted);border-radius:8px;padding:.5rem 2rem .5rem .75rem;font-weight:600;min-width:12rem}
+.issue-pick select option{color:#201D1E;background:#F4F1EB}
+.lede{font-size:clamp(1.15rem,2.4vw,1.4rem);line-height:1.5;max-width:62ch;margin:2rem 0 0;color:var(--band-ink)}
+.mast-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem;align-items:center}
+.btn{font-family:var(--display);font-weight:600;font-size:.95rem;border-radius:8px;padding:.6rem 1rem;cursor:pointer;border:1.5px solid currentColor;background:transparent}
+.band .btn-primary{background:var(--hl);color:var(--hl-ink);border-color:var(--hl)}
+.count{font-family:var(--display);color:var(--band-muted);font-size:.95rem}
+
+/* Body layout */
+.body{display:grid;grid-template-columns:15rem minmax(0,1fr);gap:clamp(1.5rem,4vw,3.5rem);padding-top:2.5rem;padding-bottom:4rem}
+.rail{position:sticky;top:calc(env(safe-area-inset-top,0px) + 1.5rem);align-self:start;font-family:var(--display)}
+.rail h2{font-size:.95rem;font-weight:700;margin:0 0 .6rem}
+.chips{display:flex;flex-direction:column;gap:.15rem;margin-bottom:1.75rem}
+.chip{display:flex;align-items:center;gap:.6rem;text-align:left;border:0;background:transparent;padding:.4rem .5rem;border-radius:6px;cursor:pointer;font-size:.95rem;color:var(--muted)}
+.chip .sw{width:.7rem;height:.7rem;border-radius:2px;background:var(--sw,var(--ink));flex:none}
+.chip .n{margin-left:auto;font-variant-numeric:tabular-nums;font-size:.85rem}
+.chip[aria-pressed="true"]{color:var(--ink);background:var(--surface);font-weight:600;box-shadow:inset 3px 0 0 var(--sw,var(--ink))}
+.toggle{display:flex;gap:.6rem;align-items:center;cursor:pointer;font-size:.95rem;margin-bottom:1.25rem}
+.toggle input{width:1.1rem;height:1.1rem;accent-color:var(--ink)}
+.search{width:100%;padding:.55rem .7rem;border:1.5px solid var(--rule);border-radius:8px;background:var(--surface)}
+
+/* To-do block — the highlighter */
+.todo{background:var(--surface);border-radius:4px 14px 14px 4px;padding:1.5rem clamp(1.1rem,3vw,1.75rem);margin:0 0 2.75rem;border-left:6px solid var(--hl)}
+.todo h2{font-family:var(--display);font-size:1.5rem;letter-spacing:-.01em;margin:0 0 .25rem}
+.todo .sub{color:var(--muted);margin:0 0 1rem;font-size:.98rem}
+.todo ol{margin:0;padding-left:1.4rem}
+.todo li{margin:.55rem 0;padding-left:.2rem}
+.todo li a{text-decoration:none}
+.todo li a:hover mark{text-decoration:underline}
+mark{background:linear-gradient(transparent 12%, var(--hl) 12%, var(--hl) 88%, transparent 88%);color:var(--hl-ink);padding:0 .15em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.todo .from{display:block;font-family:var(--display);font-size:.85rem;color:var(--muted)}
+
+/* Feed */
+.feed-head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;border-bottom:2px solid var(--ink);padding-bottom:.6rem;margin-bottom:.5rem}
+.feed-head h2{font-family:var(--display);font-size:1.5rem;margin:0;letter-spacing:-.01em}
+.feed-head span{font-family:var(--display);color:var(--muted);font-size:.9rem}
+.story{padding:1.6rem 0 1.5rem;border-bottom:1px solid var(--rule);scroll-margin-top:1rem}
+.story:target{background:linear-gradient(90deg, color-mix(in srgb, var(--hl) 22%, transparent), transparent 70%)}
+.meta{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;font-family:var(--display);font-size:.875rem;color:var(--muted);align-items:center}
+.cat{display:inline-flex;align-items:center;gap:.45rem;font-weight:700;color:var(--ink)}
+.cat::before{content:"";width:.6rem;height:.6rem;border-radius:2px;background:var(--sw)}
+.story h3{font-family:var(--display);font-weight:700;font-size:clamp(1.25rem,2.6vw,1.55rem);line-height:1.2;letter-spacing:-.015em;margin:.45rem 0 .6rem;max-width:40ch}
+.story h3 a{text-decoration:none}
+.story h3 a:hover{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
+.story p{margin:0;max-width:66ch}
+.take{margin-top:.85rem !important;font-size:1rem}
+.take b{font-family:var(--display);font-weight:700;margin-right:.35rem}
+.take.watch{color:var(--muted)}
+.row{display:flex;gap:1.1rem;margin-top:.9rem;font-family:var(--display);font-size:.9rem;align-items:center}
+.link-btn{border:0;background:none;padding:0;cursor:pointer;color:var(--muted);text-decoration:underline;text-underline-offset:3px}
+.link-btn:hover{color:var(--ink)}
+.discuss{display:none}
+.can-comment .discuss{display:inline}
+.empty{padding:3rem 0;color:var(--muted);max-width:52ch}
+.empty strong{display:block;font-family:var(--display);color:var(--ink);font-size:1.2rem;margin-bottom:.35rem}
+footer{border-top:1px solid var(--rule);padding:1.5rem 0 2.5rem;color:var(--muted);font-family:var(--display);font-size:.9rem}
+
+/* Digest dialog */
+dialog{border:0;border-radius:14px;padding:0;max-width:min(42rem,92vw);width:100%;background:var(--surface);color:var(--ink);box-shadow:0 30px 80px -20px rgba(10,15,30,.45)}
+dialog::backdrop{background:rgba(12,17,32,.55)}
+.dlg{padding:1.5rem}
+.dlg h2{font-family:var(--display);margin:0 0 .3rem;font-size:1.35rem}
+.dlg p{margin:0 0 1rem;color:var(--muted);font-size:.95rem}
+.dlg textarea{width:100%;height:18rem;border:1.5px solid var(--rule);border-radius:8px;padding:.75rem;font:.875rem/1.5 ui-monospace, Menlo, Consolas, monospace;background:var(--paper);color:var(--ink);resize:vertical}
+.dlg .row{justify-content:flex-end;margin-top:1rem}
+.dlg .btn-primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.toast{position:fixed;left:50%;bottom:calc(1.25rem + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--paper);font-family:var(--display);padding:.65rem 1rem;border-radius:8px;font-size:.95rem;opacity:0;pointer-events:none;transition:opacity .2s}
+.toast.show{opacity:1}
+
+/* Editing */
+.editbar{display:flex;gap:.6rem;flex-wrap:wrap}
+.editbar[hidden]{display:none}
+.band .btn{color:var(--band-ink)}
+.band .btn-primary{color:var(--hl-ink)}
+.edit-only{display:none !important}
+body.editing .edit-only{display:revert !important}
+body.editing .editpanel.edit-only{display:block !important}
+body.editing .story-edit.edit-only{display:flex !important}
+.editpanel{background:var(--surface);border-radius:12px;padding:1.25rem clamp(1rem,3vw,1.5rem);margin:0 0 2rem;border:1.5px dashed var(--hl);font-family:var(--display)}
+.editpanel h2{font-size:1.15rem;margin:0 0 .9rem}
+.field{display:flex;flex-direction:column;gap:.3rem;margin-bottom:.9rem;font-size:.9rem;font-weight:600}
+.field input,.field textarea,.field select{font-family:var(--serif);font-weight:400;font-size:1rem;padding:.55rem .7rem;border:1.5px solid var(--rule);border-radius:8px;background:var(--paper);color:var(--ink)}
+.field textarea{min-height:5.5rem;resize:vertical}
+.field .hint{font-weight:400;color:var(--muted);font-size:.85rem}
+.check{display:flex;gap:.55rem;align-items:center;font-size:.95rem;margin-bottom:.9rem}
+.check input{width:1.1rem;height:1.1rem;accent-color:var(--hl)}
+.btns{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+.btn-ink{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.btn-danger{color:#B3261E;border-color:#B3261E}
+.story-edit{display:flex;gap:1.1rem;margin-top:.6rem;font-family:var(--display);font-size:.9rem}
+.story-edit .link-btn{color:var(--ink)}
+.story-edit .del{color:#B3261E}
+dialog form{padding:1.5rem}
+dialog form h2{font-family:var(--display);margin:0 0 1rem;font-size:1.35rem}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .btn-danger, :root:not([data-theme="light"]) .story-edit .del{color:#FF8A80;border-color:#FF8A80} }
+:root[data-theme="dark"] .btn-danger, :root[data-theme="dark"] .story-edit .del{color:#FF8A80;border-color:#FF8A80}
+
+@media (max-width: 820px){
+  .mast{grid-template-columns:1fr}
+  .body{grid-template-columns:1fr;padding-top:1.75rem}
+  .rail{position:static}
+  .chips{flex-direction:row;overflow-x:auto;gap:.4rem;padding-bottom:.4rem;margin-bottom:1rem}
+  .chip{flex:none;border:1.5px solid var(--rule);background:var(--surface);border-radius:999px;padding:.35rem .8rem}
+  .chip .n{margin-left:.2rem}
+  .chip[aria-pressed="true"]{box-shadow:none;border-color:var(--sw,var(--ink))}
+  .rail h2{display:none}
+}
+@media (prefers-reduced-motion: reduce){.toast{transition:none}}
+</style>
+</head>
+<body>
+<header class="band">
+  <div class="wrap">
+    <div class="mast">
+      <div>
+        <h1 class="brand">The Lever Pull</h1>
+        <p class="tag">What changed in digital marketing this week, and what to do about it.</p>
+      </div>
+      <label class="issue-pick" id="issuePickWrap" hidden>
+        Issue
+        <select id="issuePick"></select>
+      </label>
+    </div>
+    <p class="lede" id="lede">Loading this week’s stories…</p>
+    <div class="mast-actions">
+      <button class="btn btn-primary" id="copyDigest" type="button" disabled>Copy digest for Slack or email</button>
+      <span class="count" id="count"></span>
+    </div>
+    <div class="mast-actions editbar" id="editbar" hidden>
+      <button class="btn" id="newWeek" type="button">Start a new week</button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap body">
+  <aside class="rail" aria-label="Filters">
+    <h2>Topics</h2>
+    <div class="chips" id="chips" role="group" aria-label="Filter by topic"></div>
+    <label class="toggle"><input type="checkbox" id="actionOnly"> Needs action only</label>
+    <input class="search" id="q" type="search" placeholder="Search stories" aria-label="Search stories">
+  </aside>
+
+  <main>
+    <section class="editpanel edit-only" id="editPanel" aria-label="Edit this week">
+      <h2>Editing this week</h2>
+      <label class="field">Week label<input id="edWeekOf" type="text" placeholder="Oct 19–26, 2026"></label>
+      <label class="field">Week summary<textarea id="edIntro" placeholder="Two or three sentences on what mattered this week."></textarea></label>
+      <div class="btns">
+        <button class="btn btn-ink" type="button" id="edSaveIntro">Save summary</button>
+        <button class="btn" type="button" id="edAddStory">Add a story</button>
+        <button class="btn btn-danger" type="button" id="edDeleteWeek">Delete this week</button>
+      </div>
+    </section>
+    <div class="feed-head"><h2>All stories</h2><span id="shown"></span></div>
+    <div id="feed"></div>
+  </main>
+</div>
+
+<div class="wrap"><footer id="foot">Summaries link to their original sources. A new issue is added each Monday.</footer></div>
+
+<dialog id="dlg">
+  <div class="dlg">
+    <h2>Digest</h2>
+    <p id="dlgMsg">Copy this and paste it into Slack or an email.</p>
+    <textarea id="dlgText" readonly></textarea>
+    <div class="row">
+      <button class="btn" type="button" id="dlgClose">Close</button>
+      <button class="btn btn-primary" type="button" id="dlgCopy">Copy text</button>
+    </div>
+  </div>
+</dialog>
+<dialog id="storyDlg">
+  <form id="storyForm" method="dialog">
+    <h2 id="storyDlgTitle">Add a story</h2>
+    <label class="field">Headline<input id="fTitle" required maxlength="200"></label>
+    <label class="field">Link to the source<input id="fUrl" type="url" placeholder="https://"></label>
+    <label class="field">Source name<input id="fSource" placeholder="Search Engine Land"></label>
+    <label class="field">Topic<select id="fCat"></select></label>
+    <label class="field">Summary<textarea id="fSummary" placeholder="Two or three sentences in your own words."></textarea></label>
+    <label class="field">Takeaway<input id="fTake" placeholder="One sentence: what the team should do or watch."></label>
+    <label class="check"><input type="checkbox" id="fAction"> Needs action (shows as “Do:” instead of “Watch:”)</label>
+    <div class="btns" style="justify-content:flex-end">
+      <button class="btn" type="button" id="fCancel">Cancel</button>
+      <button class="btn btn-ink" type="submit" id="fSave">Save story</button>
+    </div>
+  </form>
+</dialog>
+<dialog id="weekDlg">
+  <form id="weekForm" method="dialog">
+    <h2>Start a new week</h2>
+    <label class="field">Publish date<input id="wDate" type="date" required><span class="hint">Newest date shows first.</span></label>
+    <label class="field">Week label<input id="wLabel" required placeholder="Oct 19–26, 2026"></label>
+    <div class="btns" style="justify-content:flex-end">
+      <button class="btn" type="button" id="wCancel">Cancel</button>
+      <button class="btn btn-ink" type="submit">Create week</button>
+    </div>
+  </form>
+</dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  var CATS = [
+    {key:"search", name:"Search & AI answers", color:"var(--c-search)"},
+    {key:"paid-search", name:"Paid search", color:"var(--c-paid-search)"},
+    {key:"social", name:"Social & video", color:"var(--c-social)"},
+    {key:"paid-social", name:"Paid social", color:"var(--c-paid-social)"},
+    {key:"analytics", name:"Analytics", color:"var(--c-analytics)"},
+    {key:"commerce", name:"Commerce & martech", color:"var(--c-commerce)"}
+  ];
+  var catBy = {}; CATS.forEach(function(c){ catBy[c.key]=c; });
+  var state = {issues:[], current:null, cat:"all", actionOnly:false, q:""};
+  var comments = null, dbRef = null, canEditFlag = false, saving = false;
+  function clone(o){ return JSON.parse(JSON.stringify(o)); }
+  function currentData(){ var d = clone(state.current); delete d._id; d.stories = d.stories || []; return d; }
+  function writeIssue(id, data, okMsg){
+    if (!dbRef){ toast("The feed isn’t connected. Reload and try again."); return Promise.resolve(false); }
+    if (saving){ toast("Still saving the last change…"); return Promise.resolve(false); }
+    saving = true;
+    return dbRef.doc("issues/" + id).set(data).then(function(){ saving = false; if (okMsg) toast(okMsg); return true; })
+      .catch(function(e){ saving = false; toast(e && e.code === "invalid_argument" ? "You don’t have permission to edit this feed." : "Couldn’t save. Try again."); return false; });
+  }
+  function armDelete(btn, armedText, fn){
+    if (btn.dataset.armed){ fn(); return; }
+    var orig = btn.textContent; btn.dataset.armed = "1"; btn.textContent = armedText;
+    setTimeout(function(){ if (btn.isConnected){ delete btn.dataset.armed; btn.textContent = orig; } }, 4000);
+  }
+  function openDlg(d){ try { d.showModal(); } catch(e){ d.setAttribute("open",""); } }
+  var editingStoryId = null;
+  function openStory(s){
+    editingStoryId = s ? s.id : null;
+    $("storyDlgTitle").textContent = s ? "Edit story" : "Add a story";
+    $("fTitle").value = s ? s.title||"" : "";
+    $("fUrl").value = s ? s.url||"" : "";
+    $("fSource").value = s ? s.source||"" : "";
+    $("fCat").value = s ? s.category||"search" : (state.cat !== "all" ? state.cat : "search");
+    $("fSummary").value = s ? s.summary||"" : "";
+    $("fTake").value = s ? s.takeaway||"" : "";
+    $("fAction").checked = s ? !!s.needsAction : false;
+    openDlg($("storyDlg")); $("fTitle").focus();
+  }
+  function deleteStory(id){
+    var d = currentData(); d.stories = d.stories.filter(function(x){ return x.id !== id; });
+    writeIssue(state.current._id, d, "Story deleted.");
+  }
+  function isoDate(dt){ return dt.getFullYear() + "-" + String(dt.getMonth()+1).padStart(2,"0") + "-" + String(dt.getDate()).padStart(2,"0"); }
+  function weekLabel(iso){
+    var end = new Date(iso + "T12:00:00"); var start = new Date(end); start.setDate(end.getDate() - 7);
+    var m = function(d){ return d.toLocaleString("en-US",{month:"short"}); };
+    return m(start) + " " + start.getDate() + "–" + (m(start) === m(end) ? "" : m(end) + " ") + end.getDate() + ", " + end.getFullYear();
+  }
+  var $ = function(id){ return document.getElementById(id); };
+
+  function el(tag, attrs, kids){
+    var n = document.createElement(tag);
+    if (attrs) Object.keys(attrs).forEach(function(k){
+      if (k === "text") n.textContent = attrs[k];
+      else if (k === "class") n.className = attrs[k];
+      else if (k === "style") n.setAttribute("style", attrs[k]);
+      else n.setAttribute(k, attrs[k]);
+    });
+    (kids||[]).forEach(function(c){ if (c) n.appendChild(typeof c === "string" ? document.createTextNode(c) : c); });
+    return n;
+  }
+  function safeUrl(u){ return /^https?:\/\//i.test(u||"") ? u : null; }
+  function toast(msg){ var t=$("toast"); t.textContent=msg; t.classList.add("show"); clearTimeout(toast._t); toast._t=setTimeout(function(){t.classList.remove("show");},2600); }
+
+  function stories(){ return (state.current && Array.isArray(state.current.stories)) ? state.current.stories : []; }
+  function visible(){
+    var q = state.q.trim().toLowerCase();
+    return stories().filter(function(s){
+      if (state.cat !== "all" && s.category !== state.cat) return false;
+      if (state.actionOnly && !s.needsAction) return false;
+      if (q){
+        var hay = [s.title,s.summary,s.takeaway,s.source].join(" ").toLowerCase();
+        if (hay.indexOf(q) === -1) return false;
+      }
+      return true;
+    });
+  }
+
+  function renderIssuePicker(){
+    var sel = $("issuePick"); sel.textContent = "";
+    state.issues.forEach(function(iss){
+      var o = el("option", {value: iss.id, text: "Week of " + (iss.data.weekOf || iss.id)});
+      if (state.current && iss.id === state.current._id) o.selected = true;
+      sel.appendChild(o);
+    });
+    $("issuePickWrap").hidden = state.issues.length < 2;
+  }
+
+  function renderChips(){
+    var box = $("chips"); box.textContent = "";
+    var all = stories();
+    function chip(key, name, color, n){
+      var b = el("button", {type:"button", class:"chip", "aria-pressed": String(state.cat===key), style: color ? "--sw:"+color : ""},
+        [el("span",{class:"sw"}), el("span",{text:name}), el("span",{class:"n", text:String(n)})]);
+      b.addEventListener("click", function(){ state.cat = key; renderChips(); renderFeed(); });
+      box.appendChild(b);
+    }
+    chip("all", "All topics", "", all.length);
+    CATS.forEach(function(c){
+      var n = all.filter(function(s){ return s.category===c.key; }).length;
+      if (n) chip(c.key, c.name, c.color, n);
+    });
+  }
+
+  function renderTodo(){
+    var list = $("todoList"); list.textContent = "";
+    var acts = stories().filter(function(s){ return s.needsAction && s.takeaway; });
+    $("todo").hidden = acts.length === 0;
+    acts.forEach(function(s){
+      var a = el("a", {href:"#"+s.id}, [el("mark",{text:s.takeaway})]);
+      list.appendChild(el("li", null, [a, el("span",{class:"from", text:s.title})]));
+    });
+  }
+
+  function renderFeed(){
+    var feed = $("feed"); feed.textContent = "";
+    var list = visible();
+    var total = stories().length;
+    $("shown").textContent = list.length === total ? total + " stories" : list.length + " of " + total + " stories";
+    if (!total){
+      feed.appendChild(el("div",{class:"empty"},[el("strong",{text:"No stories in this week yet."}), canEditFlag ? "Use Add a story above to start." : "Check back soon."]));
+      return;
+    }
+    if (!list.length){
+      feed.appendChild(el("div",{class:"empty"},[el("strong",{text:"No stories match these filters."}), "Clear the search or pick All topics to see the full issue."]));
+      return;
+    }
+    list.forEach(function(s){
+      var c = catBy[s.category] || {name:s.category||"Other", color:"var(--muted)"};
+      var url = safeUrl(s.url);
+      var title = url ? el("a",{href:url, target:"_blank", rel:"noopener noreferrer", text:s.title}) : document.createTextNode(s.title||"");
+      var art = el("article", {class:"story", id:s.id, "data-comment-target":"", style:"--sw:"+c.color}, [
+        el("div",{class:"meta"},[ el("span",{class:"cat", text:c.name}), s.source ? el("span",{text:s.source}) : null ]),
+        el("h3", null, [title]),
+        el("p", {text:s.summary||""}),
+        s.takeaway ? el("p",{class:"take" + (s.needsAction ? "" : " watch")},
+          s.needsAction ? [el("b",{text:"Do:"}), el("mark",{text:s.takeaway})] : [el("b",{text:"Watch:"}), s.takeaway]) : null
+      ]);
+      var row = el("div",{class:"row"});
+      if (url) row.appendChild(el("a",{href:url, target:"_blank", rel:"noopener noreferrer", class:"link-btn", text:"Read the source"}));
+      art.appendChild(row);
+      var ed = el("div",{class:"story-edit edit-only"});
+      var eb = el("button",{type:"button", class:"link-btn", text:"Edit story"});
+      eb.addEventListener("click", function(){ openStory(s); });
+      var db2 = el("button",{type:"button", class:"link-btn del", text:"Delete"});
+      db2.addEventListener("click", function(){ armDelete(db2, "Click again to delete", function(){ deleteStory(s.id); }); });
+      ed.appendChild(eb); ed.appendChild(db2);
+      art.appendChild(ed);
+      feed.appendChild(art);
+    });
+  }
+
+  function renderAll(){
+    var iss = state.current;
+    if (!iss){ return; }
+    $("lede").textContent = iss.intro || (canEditFlag ? "No summary yet. Write one in the editing panel below." : "");
+    $("edWeekOf").value = iss.weekOf || "";
+    $("edIntro").value = iss.intro || "";
+    var n = stories().length, a = stories().filter(function(s){return s.needsAction;}).length;
+    $("count").textContent = "Week of " + (iss.weekOf||"") + ". " + n + " stories, " + a + " need action.";
+    $("copyDigest").disabled = false;
+    renderIssuePicker(); renderChips(); renderFeed();
+  }
+
+  function showEmpty(title, msg){
+    $("lede").textContent = msg;
+    $("feed").textContent = "";
+    $("feed").appendChild(el("div",{class:"empty"},[el("strong",{text:title}), msg]));
+    $("shown").textContent = "";
+  }
+
+  /* Digest */
+  function digestText(){
+    var iss = state.current; if (!iss) return "";
+    var lines = ["THE LEVER PULL: week of " + (iss.weekOf||""), "", iss.intro||"", ""];
+    CATS.forEach(function(c){
+      var group = stories().filter(function(s){ return s.category===c.key; });
+      if (!group.length) return;
+      lines.push(c.name.toUpperCase());
+      group.forEach(function(s){
+        lines.push("• " + s.title + (s.source ? " (" + s.source + ")" : ""));
+        lines.push("  " + (s.summary||""));
+        if (s.url) lines.push("  " + s.url);
+      });
+      lines.push("");
+    });
+    return lines.join("\n").trim();
+  }
+  function copyText(text){
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      return navigator.clipboard.writeText(text);
+    }
+    return Promise.reject(new Error("no clipboard"));
+  }
+  $("copyDigest").addEventListener("click", function(){
+    var text = digestText();
+    copyText(text).then(function(){ toast("Digest copied. Paste it into Slack or an email."); })
+      .catch(function(){
+        $("dlgText").value = text;
+        $("dlgMsg").textContent = "Select all and copy this text, then paste it into Slack or an email.";
+        try { $("dlg").showModal(); } catch(e){ $("dlg").setAttribute("open",""); }
+        $("dlgText").focus(); $("dlgText").select();
+      });
+  });
+  $("dlgClose").addEventListener("click", function(){ $("dlg").close(); });
+  $("dlgCopy").addEventListener("click", function(){
+    var ta = $("dlgText"); ta.focus(); ta.select();
+    copyText(ta.value).then(function(){ toast("Copied."); $("dlg").close(); })
+      .catch(function(){ try { if (document.execCommand("copy")) { toast("Copied."); $("dlg").close(); return; } } catch(e){} toast("Press Ctrl+C or ⌘C to copy the selected text."); });
+  });
+
+  /* Filters */
+  $("actionOnly").addEventListener("change", function(e){ state.actionOnly = e.target.checked; renderFeed(); });
+  $("q").addEventListener("input", function(e){ state.q = e.target.value; renderFeed(); });
+  $("issuePick").addEventListener("change", function(e){ selectIssue(e.target.value); });
+
+  function selectIssue(id){
+    var found = state.issues.filter(function(i){ return i.id===id; })[0] || state.issues[0];
+    if (!found) return;
+    var changed = !state.current || state.current._id !== found.id;
+    state.current = Object.assign({_id: found.id}, found.data);
+    if (changed) state.cat = "all";
+    renderAll();
+  }
+
+  /* Comments: open the shell's composer on a story */
+  function openDiscuss(article){
+    if (!comments) return;
+    comments.openComposer({element: article}).then(function(r){
+      if (r && r.opened === false) toast("Open the comments panel in the viewer to discuss this story.");
+    }).catch(function(e){
+      if (e && (e.code === "forbidden" || e.code === "not_granted")){
+        document.body.classList.remove("can-comment");
+        toast("Commenting from the page is off here.");
+      } else {
+        toast("Couldn’t open comments right now. Try again in a moment.");
+      }
+    });
+  }
+
+  CATS.forEach(function(c){ $("fCat").appendChild(el("option",{value:c.key, text:c.name})); });
+  $("edAddStory").addEventListener("click", function(){ openStory(null); });
+  $("edSaveIntro").addEventListener("click", function(){
+    if (!state.current) return;
+    var d = currentData(); d.intro = $("edIntro").value.trim(); d.weekOf = $("edWeekOf").value.trim() || d.weekOf;
+    writeIssue(state.current._id, d, "Summary saved.");
+  });
+  $("edDeleteWeek").addEventListener("click", function(){
+    var b = this;
+    armDelete(b, "Click again to delete the whole week", function(){
+      if (!dbRef || !state.current) return;
+      dbRef.doc("issues/" + state.current._id).delete().then(function(){ state.current = null; toast("Week deleted."); })
+        .catch(function(){ toast("Couldn’t delete. Try again."); });
+    });
+  });
+  $("fCancel").addEventListener("click", function(){ $("storyDlg").close(); });
+  $("storyForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    if (!state.current) return;
+    var title = $("fTitle").value.trim(); if (!title){ $("fTitle").focus(); return; }
+    var url = $("fUrl").value.trim();
+    if (url && !/^https?:\/\//i.test(url)) url = "https://" + url;
+    var story = { id: editingStoryId || ("s" + Date.now().toString(36)), category: $("fCat").value, source: $("fSource").value.trim(),
+      url: url, title: title, summary: $("fSummary").value.trim(), takeaway: $("fTake").value.trim(), needsAction: $("fAction").checked };
+    var d = currentData();
+    var i = d.stories.findIndex(function(x){ return x.id === story.id; });
+    if (i >= 0) d.stories[i] = story; else d.stories.push(story);
+    writeIssue(state.current._id, d, i >= 0 ? "Story updated." : "Story added.").then(function(ok){ if (ok) $("storyDlg").close(); });
+  });
+  $("newWeek").addEventListener("click", function(){
+    var today = isoDate(new Date());
+    $("wDate").value = today; $("wLabel").value = weekLabel(today);
+    openDlg($("weekDlg"));
+  });
+  $("wDate").addEventListener("change", function(){ if (this.value) $("wLabel").value = weekLabel(this.value); });
+  $("wCancel").addEventListener("click", function(){ $("weekDlg").close(); });
+  $("weekForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    var id = $("wDate").value; if (!id) return;
+    if (state.issues.some(function(x){ return x.id === id; })){ toast("That week already exists. Switching to it."); $("weekDlg").close(); selectIssue(id); return; }
+    state.pending = id;
+    writeIssue(id, {publishedAt:id, weekOf:$("wLabel").value.trim(), intro:"", stories:[]}, "New week created. Add stories below.").then(function(ok){
+      if (!ok) return;
+      $("weekDlg").close();
+    });
+  });
+
+  if (!window.claude || !window.claude.use){
+    showEmpty("Open this page in Claude to see the feed.", "Stories load from the team’s shared feed, which is available when the page is opened from its claude.ai link while signed in.");
+    return;
+  }
+
+
+  window.claude.use("user").then(function(u){ return u ? u.canEdit() : false; }).then(function(ok){
+    if (!ok) return;
+    canEditFlag = true; $("editbar").hidden = false; document.body.classList.add("editing");
+    if (state.current) renderAll();
+  }).catch(function(){});
+
+  window.claude.use("db").then(function(db){
+    dbRef = db;
+    if (!db){
+      showEmpty("Sign in to see the feed.", "Stories load from the team’s shared feed. Open this page from its claude.ai link while signed in to your account.");
+      return;
+    }
+    var first = true;
+    db.collection("issues").orderBy("publishedAt","desc").limit(60).onSnapshot(function(snap){
+      state.issues = snap.docs.filter(function(d){ return d.exists; }).map(function(d){ return {id:d.id, data:d.data()||{}}; });
+      if (!state.issues.length){
+        showEmpty("No issues yet.", "The first issue will show up here as soon as it’s added.");
+        return;
+      }
+      var keep = state.current && state.issues.some(function(i){ return i.id===state.current._id; });
+      if (state.pending && state.issues.some(function(i){ return i.id===state.pending; })){ selectIssue(state.pending); state.pending = null; first = false; }
+      else if (first || !keep){ selectIssue(state.issues[0].id); first = false; }
+      else { selectIssue(state.current._id); }
+    }, function(err){
+      showEmpty("The feed couldn’t load.", err && err.code === "revoked" ? "Access to this page changed. Reload to try again." : "Reload the page to try again.");
+    });
+  });
+})();
+</script>
+</body>
+</html>

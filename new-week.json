@@ -1,0 +1,17 @@
+{
+  "publishedAt": "YYYY-MM-DD",
+  "weekOf": "Mon D–D, YYYY",
+  "intro": "Two or three sentences on what mattered this week.",
+  "stories": [
+    {
+      "id": "s1",
+      "category": "search",
+      "source": "Search Engine Land",
+      "url": "https://example.com/article",
+      "title": "Headline",
+      "summary": "Two or three sentences in your own words.",
+      "takeaway": "One sentence: what the team should do or watch.",
+      "needsAction": false
+    }
+  ]
+}
