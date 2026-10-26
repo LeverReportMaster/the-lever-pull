@@ -1,0 +1,127 @@
+{
+  "publishedAt": "2026-10-26",
+  "weekOf": "Oct 19–26, 2026",
+  "intro": "Platforms spent the week deciding more on advertisers' behalf: Meta will flip on product browsing for existing ads, Google is testing AI-written text inside Search ads, and Microsoft is auto-drafting Performance Max campaigns for new accounts. On the measurement side, Google is loosening data-hashing rules and new research shows how easily AI search can be nudged into citing junk.",
+  "stories": [
+    {
+      "id": "s1",
+      "category": "paid-social",
+      "source": "Relevant Audience",
+      "url": "https://www.relevantaudience.com/meta/meta-product-browsing-existing-ads-october-28/",
+      "title": "Meta will switch on product browsing in existing ads on Oct 28",
+      "summary": "Per a notice sent to advertisers, tapping an ad may open a product-details page inside Facebook or Instagram before the visitor reaches the advertiser's site. Existing ads are opted in unless the advertiser opts out first. Meta hasn't published the notice, so the details rest on a screenshot shared by a media buyer.",
+      "takeaway": "Decide per client before Oct 28 whether to opt out in Advantage+ Creative and destination settings, especially where on-site landing page experience matters.",
+      "needsAction": true
+    },
+    {
+      "id": "s2",
+      "category": "paid-search",
+      "source": "PPC Land",
+      "url": "https://ppc.land/google-ai-writes-positive-only-review-summaries-into-search-ads-in-4-markets",
+      "title": "Google tests AI-written review summaries inside Search ads",
+      "summary": "PPC Land reports that Google is placing AI-generated review summaries in Search ads in four markets, including the US. Advertisers can't edit the text, and the summaries lean positive.",
+      "takeaway": "Spot-check live ads for the extra text and flag anything off-brand or inaccurate to your Google rep.",
+      "needsAction": true
+    },
+    {
+      "id": "s3",
+      "category": "analytics",
+      "source": "PPC Land",
+      "url": "https://ppc.land/google-ads-data-manager-stops-requiring-hashed-customer-data-november-16/",
+      "title": "Google Ads Data Manager drops the SHA-256 hashing requirement on Nov 16",
+      "summary": "An advertiser email says Data Manager will accept encrypted customer data by default from Nov 16 and match it inside a hardware-isolated environment. It affects Customer Match and enhanced conversions uploads. The email doesn't say whether hashed uploads keep working, and help pages hadn't been updated.",
+      "takeaway": "Audit which clients upload first-party data through Data Manager and confirm their pipelines still work after Nov 16.",
+      "needsAction": true
+    },
+    {
+      "id": "s4",
+      "category": "paid-search",
+      "source": "Search Engine Roundtable",
+      "url": "https://seroundtable.com/google-ads-financial-services-verification-expand-42338.html",
+      "title": "Google extends Financial Services Verification to the US and Canada",
+      "summary": "Announced Oct 20, the program will require financial advertisers to prove they're licensed or registered, working with the American and Canadian Bankers Associations. Rollout is expected in early 2027, with no scope list or deadline yet.",
+      "takeaway": "Flag banking, lending and insurance clients now and gather licensing documents so they aren't caught out when notifications start.",
+      "needsAction": false
+    },
+    {
+      "id": "s5",
+      "category": "paid-social",
+      "source": "Relevant Audience",
+      "url": "https://www.relevantaudience.com/meta/meta-choose-audience-each-ad-creative-marketing-api/",
+      "title": "Meta lets the API set age and gender per creative inside one ad set",
+      "summary": "A new Marketing API option pairs an age range and gender with each creative. The ad set must stay open to all genders and can't use Advantage+ audience. It's API-only for now, with no performance data and no word on Ads Manager.",
+      "takeaway": "Worth a test for clients with distinct audience-specific creative, but only through partners or tooling that use the API.",
+      "needsAction": false
+    },
+    {
+      "id": "s6",
+      "category": "commerce",
+      "source": "PPC Land",
+      "url": "https://ppc.land/googles-universal-cart-reaches-us-search-and-gemini-but-not-youtube/",
+      "title": "Google's Universal Cart is rolling out in US Search and Gemini",
+      "summary": "The shared cart lets shoppers collect items across merchants and check out through Google Pay or hand off to the merchant's site. It's live in Search and Gemini ahead of the holidays, with YouTube and Gmail later. Native checkout currently works for only a handful of retailers.",
+      "takeaway": "For retail clients, make sure Merchant Center feeds and product data are clean before holiday traffic hits agent-led shopping.",
+      "needsAction": false
+    },
+    {
+      "id": "s7",
+      "category": "search",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/ai-search-tools-cited-a-made-up-concept-within-a-week-paper-finds/593472/",
+      "title": "AI search tools cited a made-up concept within a week",
+      "summary": "A Fudan University paper posted to arXiv seeded a fictional concept on sites AI tools already cite often. ChatGPT, Perplexity, Grok and Google's AI cited it within seven days. A fictional product and an opinion question got little pickup.",
+      "takeaway": "Treat AI citations as easy to influence and easy to pollute, and monitor how clients' brands are described rather than assuming accuracy.",
+      "needsAction": false
+    },
+    {
+      "id": "s8",
+      "category": "search",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/recap-10-23-2026-42368.html",
+      "title": "Google tests AI summary snippets in AI Overview citation cards",
+      "summary": "The cards beside AI Overviews can now show short AI-written descriptions of each cited source. It's a test, and Google hasn't said whether it will ship or how it affects clicks.",
+      "takeaway": "Check how client pages are described in citation cards, since the snippet may now shape the click more than the page title.",
+      "needsAction": false
+    },
+    {
+      "id": "s9",
+      "category": "paid-search",
+      "source": "Microsoft Advertising via PPC News Feed",
+      "url": "https://ppcnewsfeed.com/?p=29460",
+      "title": "Microsoft builds a Performance Max draft for new advertisers",
+      "summary": "New accounts can have Microsoft analyze their website and any brand guidelines or images, build a business snapshot, and generate a Performance Max draft with ad previews and budget recommendations. Setup also offers imports from Google Ads or Meta. The details come from trade coverage rather than Microsoft's help center.",
+      "takeaway": "If we open new Microsoft accounts, review the AI draft closely before launching rather than accepting defaults.",
+      "needsAction": false
+    },
+    {
+      "id": "s10",
+      "category": "paid-search",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/recap-10-23-2026-42368.html",
+      "title": "Google Ads tests a scrolling marquee on some sponsored results",
+      "summary": "Some Search ads are showing a scrolling marquee element in a test spotted this week. Google hasn't explained it, who controls it, or whether it will roll out.",
+      "takeaway": "Note it if you see it in client SERPs and watch CTR for any unexplained shifts.",
+      "needsAction": false
+    },
+    {
+      "id": "s11",
+      "category": "search",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/recap-10-23-2026-42368.html",
+      "title": "Google still doesn't support JPEG XL in Image Search or Discover",
+      "summary": "John Mueller confirmed that Google Image Search and Discover don't yet handle the JPEG XL format, even though browsers and CDNs increasingly offer it.",
+      "takeaway": "Keep serving JPEG, WebP or AVIF for images that need to be indexed or eligible for Discover.",
+      "needsAction": false
+    },
+    {
+      "id": "s12",
+      "category": "paid-social",
+      "source": "PPC Land",
+      "url": "https://ppc.land/midterm-ads-lift-ctv-prices-to-43-as-youtube-takes-15-8-of-us-tv-time/",
+      "title": "Midterm political spend lifts CTV prices while YouTube takes 15.8% of US TV time",
+      "summary": "Political ad demand ahead of the midterms is pushing connected-TV prices up, and YouTube now accounts for roughly 15.8% of US TV viewing time. Both raise the cost and competition of video inventory through election season.",
+      "takeaway": "Expect higher video CPMs through early November and pad video budgets or shift flighting where pacing matters.",
+      "needsAction": false
+    }
+  ]
+}
