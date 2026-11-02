@@ -1,0 +1,107 @@
+{
+  "publishedAt": "2026-11-02",
+  "weekOf": "Oct 27–Nov 2, 2026",
+  "intro": "Big-tech earnings set the tone: Google's search growth slowed and it blamed weaker AI Mode monetization, then moved to expand ads in AI Mode. Meta and Microsoft posted strong ad numbers, while Meta's new terms make advertisers liable for its automated AI ad edits. On the SEO side, AI Overviews now appear on most searches, and rankings stayed jumpy.",
+  "stories": [
+    {
+      "id": "s1",
+      "category": "paid-search",
+      "source": "Search Engine Land",
+      "url": "https://searchengineland.com/google-expands-ads-in-ai-mode-to-10-new-markets-with-uk-and-brazil-next-499644",
+      "title": "Google brings AI Mode ads to 10 more countries and adds multiturn ads in the US",
+      "summary": "Google announced Oct 28 that ads in AI Mode are expanding to ten more markets, including Australia, Canada and India, with the UK, Brazil and Mexico planned for Q4. In the US, a new multiturn format places sponsored results inside follow-up answers. Existing Search, Shopping and Performance Max campaigns are eligible automatically, and there is no separate AI Mode reporting.",
+      "takeaway": "Confirm which clients have AI Mode eligibility switched on, and expect AI Mode spend to show up blended into normal campaign reports.",
+      "needsAction": true
+    },
+    {
+      "id": "s2",
+      "category": "paid-search",
+      "source": "Search Engine Land",
+      "url": "https://searchengineland.com/google-earnings-call-q3-2026-499706",
+      "title": "Google says weaker AI Mode monetization slowed Search ad growth",
+      "summary": "Search revenue rose 12% to about $63.35 billion in Q3, down from 19% growth in Q1 and 17% in Q2. Management listed AI Mode monetization among several factors, while saying query growth is the strongest in five years. Google gave no AI Mode-specific revenue or CPC figures.",
+      "takeaway": "Expect Google to push new AI Mode ad formats hard; watch CPC and volume trends in client accounts for any shifts.",
+      "needsAction": false
+    },
+    {
+      "id": "s3",
+      "category": "paid-social",
+      "source": "PPC Land",
+      "url": "https://ppc.land/meta-makes-advertisers-solely-responsible-for-its-ai-ad-edits-from-oct-30/",
+      "title": "Meta makes advertisers solely responsible for its AI ad edits from Oct 30",
+      "summary": "Revised Meta commercial terms effective Oct 30 say advertisers are solely responsible for what Meta's AI features create or change in their ads, including features Meta turns on itself. Continuing to run ads after that date counts as acceptance. Agencies report automated edits already running on some ads where nobody enabled them.",
+      "takeaway": "Audit client Meta accounts for auto-enabled creative enhancements and turn off any that need brand or legal approval.",
+      "needsAction": true
+    },
+    {
+      "id": "s4",
+      "category": "paid-social",
+      "source": "Exchange4media",
+      "url": "https://www.exchange4media.com/digital-news/metas-ad-revenue-jumps-26-to-631-billion-as-ai-boosts-conversions-ad-prices-159351.html",
+      "title": "Meta ad revenue jumps 26% as impressions and prices both rise",
+      "summary": "Meta reported about $63.1 billion in Q3 ad revenue, up 26%. Reports cite roughly 10% more impressions and 14% higher average prices. Nearly 10 million advertisers used its generative AI creative tools during the quarter, and Q4 guidance is $73–76 billion.",
+      "takeaway": "Rising Meta ad prices into Q4 mean tighter CPA targets; flag holiday budget pressure to clients early.",
+      "needsAction": false
+    },
+    {
+      "id": "s5",
+      "category": "paid-search",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/microsoft-earnings-q127-42404.html",
+      "title": "Microsoft search and advertising revenue grows 12%",
+      "summary": "Microsoft's search and advertising line rose 12% in its September quarter, credited to higher volume and revenue per search on Edge and Bing. The metric now bundles in LinkedIn Marketing Solutions and Premium Subscriptions, so it no longer isolates search ad growth.",
+      "takeaway": "Microsoft Ads remains a healthy incremental channel; a good moment to revisit Bing budget share for search clients.",
+      "needsAction": false
+    },
+    {
+      "id": "s6",
+      "category": "analytics",
+      "source": "Search Engine Roundtable",
+      "url": "https://seroundtable.com/google-ads-all-conversions-tab-live-42395.html",
+      "title": "Google Ads \"All conversions\" tab is now broadly live",
+      "summary": "A new All conversions submenu under Goals shows account-level goals, click-through windows and primary or secondary status in one place. It is rolling out to many accounts and is meant to make tracking audits and troubleshooting faster.",
+      "takeaway": "Use it for a quick conversion-setup audit on each account before Q4 spend ramps up.",
+      "needsAction": true
+    },
+    {
+      "id": "s7",
+      "category": "paid-search",
+      "source": "Search Engine Roundtable",
+      "url": "https://seroundtable.com/google-ads-apple-messages-button-42400.html",
+      "title": "Google tests an Apple Messages button on sponsored results",
+      "summary": "A user spotted a new Apple Messages button on a Search ad that opens the Messages app with a prefilled text. It appears to be a limited test, with no official documentation, and Google's existing message assets are still in beta.",
+      "takeaway": "Worth noting for lead-gen and local clients; watch for it appearing in message asset options.",
+      "needsAction": false
+    },
+    {
+      "id": "s8",
+      "category": "search",
+      "source": "Search Engine Roundtable",
+      "url": "https://seroundtable.com/over-80-of-google-searches-have-ai-overviews-42372.html",
+      "title": "AI Overviews now appear on over 80% of Google searches",
+      "summary": "Citing data from Semrush, SE Ranking and seoClarity, the report says AI Overviews show up on more than 80% of searches, up from about 50% in mid-2025. Exact figures vary by tool and query mix, but every dataset points the same direction.",
+      "takeaway": "Treat AI Overview visibility as the default SERP condition when setting organic traffic expectations.",
+      "needsAction": false
+    },
+    {
+      "id": "s9",
+      "category": "search",
+      "source": "Search Engine Roundtable",
+      "url": "https://seroundtable.com/google-search-ranking-volatility-42379.html",
+      "title": "Unconfirmed Google ranking volatility spikes again Oct 27",
+      "summary": "After heavy tracker movement on Oct 24, chatter and tool volatility spiked again on Oct 27. Google has not confirmed an update, and the September spam update finished on Oct 8.",
+      "takeaway": "Hold off on diagnosing ranking dips until a few days pass, and annotate the window in client reports.",
+      "needsAction": false
+    },
+    {
+      "id": "s10",
+      "category": "paid-search",
+      "source": "PPC Land",
+      "url": "https://ppc.land/retailers-on-ai-max-face-72-more-invalid-traffic-lunio-finds/",
+      "title": "Lunio: AI Max accounts for 68% of invalid clicks in retail search",
+      "summary": "Lunio analyzed over 414 million clicks and found AI Max produced about 55% of retail Search clicks but 68% of invalid ones, with the invalid rate more than doubling between Q4 2025 and Q2 2026. The research shows correlation, not cause, and it comes from a click-fraud vendor.",
+      "takeaway": "For retail accounts on AI Max, review search term and placement quality and consider an invalid-traffic check.",
+      "needsAction": true
+    }
+  ]
+}
