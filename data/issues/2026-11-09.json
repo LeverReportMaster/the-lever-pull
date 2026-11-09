@@ -1,0 +1,127 @@
+{
+  "publishedAt": "2026-11-09",
+  "weekOf": "Nov 3–9, 2026",
+  "intro": "AI surfaces dominated the week: Google tested a fourth ad slot in AI Mode, OpenAI moved ChatGPT Ads to target-based bidding, and Bing put ads atop its AI Mode. Meta, TikTok and Threads made smaller ad-format and setup changes, while Shopify's earnings highlighted growing AI-referred orders.",
+  "stories": [
+    {
+      "id": "s1",
+      "category": "paid-search",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-ai-mode-four-ads-42443.html",
+      "title": "Google AI Mode is now showing up to four ads under a single answer",
+      "summary": "Google AI Mode has begun serving up to four ads beneath one response, up from the usual one to three. The examples seen so far are text ads, and Google hasn't said whether this is a test or how widely it runs. It follows the earnings-call message that AI Mode will carry more ads, more often.",
+      "takeaway": "Expect AI Mode to take a growing share of Search ad inventory, so keep text ad assets and keyword themes broad enough to qualify.",
+      "needsAction": false
+    },
+    {
+      "id": "s2",
+      "category": "paid-search",
+      "source": "Search Engine Land",
+      "url": "https://searchengineland.com/chatgpt-ads-bidding-options-are-changing-on-november-9th-500701",
+      "title": "ChatGPT Ads swaps Max Bid and Max CPC for Target CPA and Target CPC",
+      "summary": "From Nov 9, OpenAI lets advertisers set cost targets in Ads Manager, with Target CPC replacing Max CPC for click campaigns and Target CPA replacing Max Bid for conversion campaigns. Max Bid and Max CPC retire Jan 1, 2027, and OpenAI says delivery against a specific target isn't guaranteed. Autobid is also renamed intelligent bidding.",
+      "takeaway": "Anyone testing ChatGPT Ads should plan the move off manual caps before year end and budget for looser cost control.",
+      "needsAction": true
+    },
+    {
+      "id": "s3",
+      "category": "paid-search",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-ads-pmax-channel-report-search-42454.html",
+      "title": "Google says PMax-style channel definitions will reach Search and Shopping reports in 2027",
+      "summary": "Google's help documentation now says the Performance Max channel definitions (Search, Search partners, YouTube, Discover, Gmail, Maps) will carry into standard Search and Shopping reporting in 2027. The documentation also points to new dedicated placement codes, such as m for Maps, gm for Gmail and dsc for Discover.",
+      "takeaway": "More channel transparency is coming, but the new codes could mislabel traffic in anything keyed to the old values.",
+      "needsAction": true
+    },
+    {
+      "id": "s4",
+      "category": "search",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/november-2026-google-webmaster-report-42431.html",
+      "title": "Google's longest 2026 spam update is finished, and AI content rules got tighter",
+      "summary": "Search Engine Roundtable's monthly webmaster recap says the spam update has finished rolling out and that Google tightened guidance on AI-generated content. Google also updated how links display in AI Mode and AI Overviews while declining to break out click data for them, and no November core update had been announced as of Nov 5.",
+      "takeaway": "Check organic traffic for sites that moved after the spam update and review any scaled AI content for quality.",
+      "needsAction": true
+    },
+    {
+      "id": "s5",
+      "category": "search",
+      "source": "SEOCode",
+      "url": "https://seocode.io/blog/changed-google-ai-search-november-4-2026",
+      "title": "Google moves AI Overviews for brand searches to the right-hand column",
+      "summary": "On Nov 2, Google reportedly changed the layout so AI Overviews on brand-name queries sit in the right column rather than at the top of results. The change could shift how much attention brand listings and sitelinks get on those searches.",
+      "takeaway": "Review click-through on branded queries over the next few weeks to see whether the layout affects clicks.",
+      "needsAction": false
+    },
+    {
+      "id": "s6",
+      "category": "paid-search",
+      "source": "SEOCode",
+      "url": "https://seocode.io/blog/changed-google-ai-search-november-4-2026",
+      "title": "Bing is showing ads at the top of Bing AI Mode results",
+      "summary": "Bing has begun placing ads at the top of its AI Mode results, the experience formerly called Copilot Search. This gives Microsoft Advertising accounts another AI-driven placement to watch.",
+      "takeaway": "Microsoft Ads accounts should monitor impression and conversion shifts and keep ad copy answer-friendly.",
+      "needsAction": false
+    },
+    {
+      "id": "s7",
+      "category": "paid-social",
+      "source": "Social Media Marketing News (Advertain)",
+      "url": "https://www.advertain.com/blog/social-media-marketing-news-6-november-2026",
+      "title": "UK regulator opens a probe into Meta's commercial terms for AI",
+      "summary": "The UK competition regulator opened an investigation on Oct 30 into Meta's commercial terms for AI, and a related rollout was paused with existing terms staying in place. The practical impact on advertisers is unclear for now.",
+      "takeaway": "Nothing to change today, but watch for any shift in how Meta's AI features are offered to UK advertisers.",
+      "needsAction": false
+    },
+    {
+      "id": "s8",
+      "category": "paid-social",
+      "source": "Social Media Marketing News (Advertain)",
+      "url": "https://www.advertain.com/blog/social-media-marketing-news-6-november-2026",
+      "title": "Trending Ads for Instagram Reels are now open to all advertisers",
+      "summary": "Meta has made Trending Ads available to every advertiser on Instagram Reels. The format helps brands pair campaigns with content that is currently gaining traction on the platform.",
+      "takeaway": "Test trending placements against standard Reels creative for awareness and prospecting.",
+      "needsAction": false
+    },
+    {
+      "id": "s9",
+      "category": "paid-social",
+      "source": "Social Media Marketing News (Advertain)",
+      "url": "https://www.advertain.com/blog/social-media-marketing-news-6-november-2026",
+      "title": "TikTok's Smart+ Creative Selection can build video ads from creator posts and AI assets",
+      "summary": "TikTok's Q4 product preview describes Smart+ Creative Selection, which proposes video ads drawn from creator posts, past ads and AI-generated assets. Advertisers can choose how much human review to keep before ads go live.",
+      "takeaway": "If you pilot it, keep manual approval on until you trust the output for brand safety.",
+      "needsAction": true
+    },
+    {
+      "id": "s10",
+      "category": "paid-social",
+      "source": "Social Media Marketing News (Advertain)",
+      "url": "https://www.advertain.com/blog/social-media-marketing-news-6-november-2026",
+      "title": "Threads ads no longer require a matching Instagram username",
+      "summary": "Meta is dropping the requirement that advertisers have a matching Instagram username to run ads on Threads. That lowers the setup barrier for brands whose handles differ across platforms.",
+      "takeaway": "Easier to add Threads placements for clients with mismatched handles.",
+      "needsAction": false
+    },
+    {
+      "id": "s11",
+      "category": "commerce",
+      "source": "AI Commerce News Digest",
+      "url": "https://stellagent.ai/insights/ec-ai-news-digest-2026-11-04",
+      "title": "Shopify Q3 revenue up 32%, with AI-referred orders at 3.3x last year",
+      "summary": "Shopify reported Q3 revenue of $3.74B and GMV of $119.1B, and said orders from AI search grew to 3.3 times the prior-year level. Shares still fell on softer GMV and subscription numbers and heavy Q4 spending guidance. Its Fall '26 Edition also added agentic commerce tools and new local payment methods.",
+      "takeaway": "AI-referred traffic is becoming a measurable share of Shopify orders, so segment it in reporting for ecommerce clients.",
+      "needsAction": false
+    },
+    {
+      "id": "s12",
+      "category": "commerce",
+      "source": "TechnologyChecker",
+      "url": "https://technologychecker.io/blog/agentic-commerce-statistics-insights",
+      "title": "About three in four Shopify stores checked publish an agent-facing commerce manifest",
+      "summary": "A scan of roughly 19,000 storefronts found that around three quarters of the Shopify stores giving a clear answer publish a manifest for the UCP agent commerce spec. It points to how quickly stores are preparing for AI shopping agents, though it comes from a single vendor's probe.",
+      "takeaway": "Audit client catalogs and feeds for agent readiness, treating this as a directional stat only.",
+      "needsAction": false
+    }
+  ]
+}
