@@ -1,0 +1,127 @@
+{
+  "publishedAt": "2026-11-16",
+  "weekOf": "Nov 9–16, 2026",
+  "intro": "Google started its November core update just ahead of Black Friday, so expect ranking swings through roughly Nov 24. OpenAI moved further into brand discovery and checkout with business profiles, Business Agents and a new ChatGPT Wallet. On the measurement side, Meta's Pixel began counting on-device conversions by default and Google's Data Manager moved to encrypted customer data.",
+  "stories": [
+    {
+      "id": "s1",
+      "category": "search",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/google-november-2026-core-update/596614",
+      "title": "Google's November 2026 core update is rolling out ahead of Black Friday",
+      "summary": "Google began the November 2026 core update on Nov 10 and says it may take up to two weeks to finish. That puts the likely end around Nov 24, just before the peak holiday shopping window. Google advises waiting at least a week after the rollout ends before comparing Search Console data with the period before it started.",
+      "takeaway": "Hold off on SEO diagnoses for ranking drops until the rollout ends, and warn retail clients that holiday organic traffic may be volatile.",
+      "needsAction": false
+    },
+    {
+      "id": "s2",
+      "category": "search",
+      "source": "The Next Web",
+      "url": "https://thenextweb.com/news/openai-businesses-in-chatgpt-business-agents",
+      "title": "OpenAI launches Businesses in ChatGPT, with verified profiles and Business Agents",
+      "summary": "A new beta lets companies claim a verified profile in a Business Hub, upload product feeds and see how often ChatGPT mentions them, plus clicks and conversation topics. Eligible US e-commerce and online-service businesses can also launch their own Business Agents and sponsor them as the destination for ChatGPT Ads. OpenAI says paying for ads does not change how often ChatGPT recommends a business.",
+      "takeaway": "This is the first real first-party visibility data for ChatGPT, so claim profiles for clients early.",
+      "needsAction": true
+    },
+    {
+      "id": "s3",
+      "category": "commerce",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/",
+      "title": "ChatGPT Wallet lets AI agents pick products and check out",
+      "summary": "OpenAI launched ChatGPT Wallet, built with American Express, Mastercard and Visa, so its shopping agents can complete purchases for users. Access starts with US Pro subscribers, and OpenAI plans to let users pre-approve purchases within spending, category or time limits. Merchant fees have not been disclosed.",
+      "takeaway": "Agent checkout is arriving fast, so clean product feeds and structured data matter more for e-commerce clients.",
+      "needsAction": false
+    },
+    {
+      "id": "s4",
+      "category": "search",
+      "source": "Search Engine Roundtable",
+      "url": "https://seroundtable.com/gemini-4-carbon-google-search-ai-mode-42502.html",
+      "title": "Gemini 4 Carbon arrives in Google AI Mode for Ultra subscribers",
+      "summary": "Google is rolling out its newest model, Gemini 4 Carbon, in AI Mode for Google AI Ultra subscribers, who can pick it from the model menu. It follows Gemini 4 Argon, which reached AI Mode for Pro and Ultra users in October. Google pitches Carbon as stronger at long agentic tasks and reasoning.",
+      "takeaway": "AI Mode answers keep changing with each model release, so recheck brand visibility in AI Mode regularly rather than once.",
+      "needsAction": false
+    },
+    {
+      "id": "s5",
+      "category": "paid-social",
+      "source": "PPC Land",
+      "url": "https://ppc.land/meta-pixel-will-count-more-conversions-from-nov-12-unless-advertisers-opt-out/",
+      "title": "Meta Pixel now counts on-device conversions by default",
+      "summary": "From Nov 12, Meta began a gradual rollout of a Pixel setting that matches purchases on the customer's device using the email they provided and temporary device data. It is on by default for datasets already sending events, and can be turned off per dataset in Events Manager settings. Reported conversions may rise, and privacy commentators have questions about consent signals.",
+      "takeaway": "Check each client's dataset settings and compare Meta-reported purchases with backend orders over the next few weeks.",
+      "needsAction": true
+    },
+    {
+      "id": "s6",
+      "category": "paid-social",
+      "source": "Search Engine Journal",
+      "url": "https://searchenginejournal.com/meta-pauses-updated-business-ad-terms/596493",
+      "title": "Meta pauses its new ad terms, including AI-edit liability, with no new date",
+      "summary": "Meta had pushed its revised Commercial, Self-Serve Ad, Product Catalog and Ad Creative Generative AI terms to Nov 20, then paused them entirely after publisher and regulator pushback. The existing terms remain in effect, and Meta has not set a new date. This reverses what we reported two weeks ago about advertisers taking on sole responsibility for Meta's AI ad edits from Oct 30.",
+      "takeaway": "The AI-edit liability change is on hold for now, but keep reviewing AI-generated variations since the terms could return.",
+      "needsAction": false
+    },
+    {
+      "id": "s7",
+      "category": "analytics",
+      "source": "PPC Land",
+      "url": "https://ppc.land/google-ads-data-manager-stops-requiring-hashed-customer-data-november-16/",
+      "title": "Google Ads Data Manager drops the hashing requirement for customer data",
+      "summary": "Starting Nov 16, Google Ads Data Manager no longer requires SHA-256 hashed customer data and accepts encrypted data by default, which Google decrypts and matches internally. The notice doesn't clearly say whether hashed uploads stay supported, whether there is an opt-out, or which API versions are affected. Coverage notes Google's help pages still recommend hashing.",
+      "takeaway": "Confirm that Customer Match and offline conversion uploads still process normally this week and watch match rates.",
+      "needsAction": true
+    },
+    {
+      "id": "s8",
+      "category": "paid-search",
+      "source": "PPC News Feed",
+      "url": "https://ppcnewsfeed.com/ppc-news/2026-11/new-value-track-parameter-isolates-ai-max-traffic/",
+      "title": "New ValueTrack parameter helps separate AI Max traffic",
+      "summary": "A new {search_term_matchtype} parameter reportedly records the match type of the search term that triggered the ad, using \"a\" for AI Max expansions and keywordless matches. Combined with {matchtype}, it shows when a keyword matched as exact, phrase or broad but the actual search came from AI Max. This makes it easier to judge AI Max traffic in analytics and CRM data, not just in the Google Ads UI.",
+      "takeaway": "Consider adding the parameter to tracking templates for accounts running AI Max to audit expansion quality.",
+      "needsAction": false
+    },
+    {
+      "id": "s9",
+      "category": "paid-search",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/microsoft-advertising-updates-ui-following-advertiser-feedback/597078/",
+      "title": "Microsoft Advertising overhauls its interface and adds bid strategy reports",
+      "summary": "Microsoft's November product update says it is reworking the Ads interface after complaints about blank pages, sign-in issues and clunky reporting, with regrouped navigation, breadcrumbs and better tables with filters and date comparisons. It also adds central Bid Strategy Reports that compare target CPA or ROAS with actual results. Search term landing page reporting starts rolling out in mid-November.",
+      "takeaway": "Use the new bid strategy reports to check whether Microsoft campaigns are actually hitting their tCPA and tROAS targets.",
+      "needsAction": false
+    },
+    {
+      "id": "s10",
+      "category": "paid-social",
+      "source": "PPC Land",
+      "url": "https://ppc.land/linkedin-takes-job-role-tv-ad-targeting-to-the-uk-its-third-market/",
+      "title": "LinkedIn brings job-role targeting on connected TV to the UK",
+      "summary": "LinkedIn expanded its connected TV ads, which use LinkedIn's professional targeting such as job role, to the UK after the US and Canada. The announcement lists LG, Paramount+ and Titan OS as UK partners, though some reports name only LG and Titan OS. It gives B2B advertisers another upper-funnel option tied to LinkedIn's audience data.",
+      "takeaway": "B2B clients with UK audiences can now test CTV reach using LinkedIn's job-based targeting.",
+      "needsAction": false
+    },
+    {
+      "id": "s11",
+      "category": "paid-social",
+      "source": "PPC Land",
+      "url": "https://ppc.land/youtube-drops-the-word-skip-from-some-ad-buttons-in-favour-of-next/",
+      "title": "YouTube is replacing \"Skip\" with \"Next\" on some ad buttons",
+      "summary": "Some YouTube skippable ads now show a \"Next\" button instead of \"Skip\", a change spotted in early November. Google has not documented it, and its help pages still describe skipping after five seconds. A softer label could affect how many viewers skip and therefore view rates.",
+      "takeaway": "Watch view rate and skip behavior on YouTube campaigns, and note the label change if metrics move without an obvious cause.",
+      "needsAction": false
+    },
+    {
+      "id": "s12",
+      "category": "paid-social",
+      "source": "Marketing-Interactive",
+      "url": "https://www.marketing-interactive.com/reddit-begins-testing-ads-in-search-results",
+      "title": "Reddit starts testing ads inside its own search results",
+      "summary": "Reddit has begun testing ad placements in its search results with a select group of eligible advertisers, matching ads to what users are actively searching for. The move gives Reddit a search-intent inventory as more people use it to check product recommendations. It is still a limited test with no self-serve access yet.",
+      "takeaway": "Ask Reddit reps about joining the search ads test for clients whose buyers research purchases on Reddit.",
+      "needsAction": false
+    }
+  ]
+}
